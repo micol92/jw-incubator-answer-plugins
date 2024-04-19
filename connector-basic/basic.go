@@ -144,13 +144,17 @@ func (g *Connector) ConnectorReceiver(ctx *plugin.GinContext, receiverURL string
 	defer response.Body.Close()
 	data, _ := io.ReadAll(response.Body)
 
+	log.Errorf("[jw log] data :  %s", data)
+	
 	userInfo = plugin.ExternalLoginUserInfo{
 		MetaInfo: string(data),
 	}
-
+	log.Errorf("[jw log] userInfo :  %s", uerInfo)
+	
 	if len(g.Config.UserIDJsonPath) > 0 {
 		userInfo.ExternalID = gjson.GetBytes(data, g.Config.UserIDJsonPath).String()
 	}
+		
 	if len(userInfo.ExternalID) == 0 {
 		log.Errorf("fail to get user id from json path: %s", g.Config.UserIDJsonPath)
 		return userInfo, nil
