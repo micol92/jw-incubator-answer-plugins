@@ -80,7 +80,7 @@ func (g *Connector) Info() plugin.Info {
 		Description: plugin.MakeTranslator(i18n.InfoDescription),
 		Author:      "answerdev",
 		Version:     "1.2.5",
-		Link:        "https://github.com/apache/incubator-answer-plugins/tree/main/connector-basic",
+		Link:        "https://github.com/micol92/jw-incubator-answer-plugins/tree/main/connector-basic",
 	}
 }
 
