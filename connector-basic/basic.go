@@ -149,7 +149,7 @@ func (g *Connector) ConnectorReceiver(ctx *plugin.GinContext, receiverURL string
 	userInfo = plugin.ExternalLoginUserInfo{
 		MetaInfo: string(data),
 	}
-	log.Errorf("[jw log] userInfo :  %s", uerInfo)
+	log.Errorf("[jw log] userInfo :  %s", userInfo)
 	
 	if len(g.Config.UserIDJsonPath) > 0 {
 		userInfo.ExternalID = gjson.GetBytes(data, g.Config.UserIDJsonPath).String()
