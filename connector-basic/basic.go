@@ -29,7 +29,7 @@ import (
 	"time"
 	"unicode/utf8"
 
-	"github.com/apache/incubator-answer-plugins/connector-basic/i18n"
+	"github.com/micol92/jw-incubator-answer-plugins/connector-basic/i18n"
 	"github.com/apache/incubator-answer/pkg/checker"
 	"github.com/apache/incubator-answer/plugin"
 	"github.com/segmentfault/pacman/log"
